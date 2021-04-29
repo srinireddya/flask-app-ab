@@ -4,9 +4,8 @@ COPY requirements.txt /webapp/requirements.txt
 
 WORKDIR /webapp
 
-RUN apt get update
 
-RUN pip install -r requirements.txt
+RUN pip install --no-cache-dir -r requirements.txt
 
 COPY webapp/* webapp/
 
